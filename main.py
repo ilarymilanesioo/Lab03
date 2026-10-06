@@ -1,6 +1,5 @@
 from deposito_strumenti import DepositoStrumenti
 from datetime import datetime
-
 def menu():
     print("\n--- MENU DEPOSITO STRUMENTI ---")
     print("1. Modifica nome del responsabile del deposito")

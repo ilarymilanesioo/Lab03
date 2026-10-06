@@ -52,7 +52,6 @@ class DepositoStrumenti:
             'valore': valore
             }
         # TODO
-
     def strumenti_ordinati_per_marca(self):
         """Ordina gli strumenti per marca in ordine alfabetico"""
         # TODO
