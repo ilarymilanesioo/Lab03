@@ -70,6 +70,7 @@ class DepositoStrumenti:
             'valore': valore
             }
         # TODO
+
     def strumenti_ordinati_per_marca(self):
         """Ordina gli strumenti per marca in ordine alfabetico"""
         return sorted(self.strumenti, key=attrgetter('marca'), reverse=True)
@@ -82,23 +83,15 @@ class DepositoStrumenti:
         for prestito in self.prestiti.values():
             if prestito.id_strumento==id_strumento:
                 raise Exception("Lo strumento è già in prestito.")
-
         id_prestito = f"P{len(self.prestiti) + 1}"
-
         prestito = Prestito(id_prestito, data, id_strumento, cognome_allievo)
-
         self.prestiti[id_prestito] = prestito
-
         return prestito
         # TODO
 
     def termina_prestito(self, id_prestito):
         """Termina un prestito in atto"""
-
-        def termina_prestito(self, id_prestito):
-            """Termina un prestito in atto"""
-            if id_prestito not in self.prestiti:
-                raise Exception("Il codice del prestito inserito non esiste.")
-
-            del self.prestiti[id_prestito]
+        if id_prestito not in self.prestito:
+            raise Exception("Il codice del prestito inserito non esiste.")
+        del self.prestito[id_prestito]
         # TODO
